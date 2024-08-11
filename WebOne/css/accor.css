@@ -1,0 +1,66 @@
+
+
+
+#container {
+    width: 980px;
+    margin: 0 auto;
+    max-width: 100%
+}
+
+.accordion {
+    background-color: #fff;
+    max-width: 100%;
+    margin: 100px auto 100px;
+    border: 1px solid #d9e5e8;
+}
+
+.accordion li {
+    border-bottom: 1px solid #d9e5e8;
+    position: relative;
+}
+
+.accordion li p {
+    display: none;
+    text-align: justify;
+    padding: 10px 25px 30px;
+    color: #6b97a4;
+}
+
+.accordion a {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 3;
+    font-size: 14px;
+    text-indent: 15px;
+    user-select: none;
+}
+
+.accordion a:after {
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid #4a6e78;
+    border-bottom: 1px solid #4a6e78;
+    position: absolute;
+    left: 15px;
+    content: " ";
+    top: 17px;
+    transform: rotate(-45deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.accordion p {
+    font-size: 13px;
+    line-height: 2;
+    padding: 10px;
+}
+
+a.active:after {
+    transform: rotate(45deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}

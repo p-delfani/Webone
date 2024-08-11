@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ثبت نام و ورود</title>
+	<!-- Styles -->
+	<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+	<link type="text/css" href="css/loginstyle.css" rel="stylesheet" />
+	<!-- /Styles -->
+</head>
+<body class="rtl">
+	<div class="container register">
+		<div class="row">
+			<!-- Right Side Title -->
+			<div class="col-12 col-md-3 register-right">
+				<img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+				<h3>خوش آمدید</h3>
+				<p>تنها در چند ثانیه عضو شوید.</p>
+				<button class="btn btn-lg btn-light"><a class="text-primary	" href="index.html">بازگشت به خانه</a></button>
+			</div>
+			<!-- /Right Side Title -->
+			<!-- Left Side Forms -->
+			<div class="col-12 col-md-9 mt-5">
+				<div class="register-left p-3">
+					<!-- Tabs Nav-bar -->
+					<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">ثبت نام</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">ورود</a>
+						</li>
+					</ul>
+					<!-- /Tabs Nav-bar -->
+					<div class="tab-content" id="myTabContent">
+						<!-- Tab 1 -->
+						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<h3 class="register-heading">ثبت نام </h3>
+							<form action="send_mail.php" method="post">
+								<div class="row register-form mx-auto">
+									<div class="col-12 col-md-6">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="* نام" value="" />
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="* نام خانوادگی" value="" />
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control" placeholder="رمز عبور *" value="" />
+										</div>
+										<div class="form-group">
+											<input type="password" class="form-control"  placeholder="تکرار رمز عبور *" value="" />
+										</div>
+										<div class="form-group">
+											<div class="maxl">
+												<label class="radio inline">
+													<input type="radio" name="gender" value="مرد" checked>
+													<span> مرد </span>
+												</label>
+												<label class="radio inline">
+													<input type="radio" name="gender" value="زن">
+													<span>زن </span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-12 col-md-6">
+										<div class="form-group">
+											<input type="email" class="form-control" placeholder="پست الکترونیک *" value="" />
+										</div>
+										<div class="form-group">
+											<input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="* تلفن تماس" value="" />
+										</div>
+										<div class="form-group">
+											<select class="form-control">
+												<option class="hidden"  selected disabled>سوال امنیتی را انتخاب کنید</option>
+												<option>در چه ماهی متولد شده اید؟</option>
+												<option>برند تلفن همراه شما چیست؟</option>
+												<option>نام نخستین عمویتان چیست؟</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="* پاسخ را وارد کنید" value="" />
+										</div>
+										<input  type="submit" class="btnRegister"  value="عضویت"/>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- /Tab 1 -->
+						<!-- Tab 2 -->
+						<div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<h3  class="register-heading">ورود </h3>
+							<form action="send_mail.php" method="post">
+								<div class="row register-form mx-auto">
+									<div class="col-12 col-md-6">
+										<div class="form-group">
+											<input type="text" name="fname" class="form-control" placeholder="* نام" value="" />
+										</div>
+										<div class="form-group">
+											<input type="text" name="lname" class="form-control" placeholder="* نام خانوادگی" value="" />
+										</div>
+										<div class="form-group">
+											<input type="email" name="email" class="form-control" placeholder="پست الکترونیک *" value="" />
+										</div>
+										<div class="form-group">
+											<input type="text" name="tel" maxlength="10" minlength="10" class="form-control" placeholder="* تلفن تماس" value="" />
+										</div>
+									</div>
+									<div class="col-12 col-md-6">
+										<div class="form-group">
+											<input type="password" name="password" class="form-control" placeholder="رمز عبور *" value="" />
+										</div>
+										<div class="form-group">
+											<input type="password" name="repeat_password" class="form-control" placeholder="تکرار رمز عبور *" value="" />
+										</div>
+										<div class="form-group">
+											<select class="form-control" name="question">
+												<option class="hidden"  selected disabled>سوال امنیتی را انتخاب کنید</option>
+												<option>در چه ماهی متولد شده اید؟</option>
+												<option>برند تلفن همراه شما چیست؟</option>
+												<option>نام نخستین عمویتان چیست؟</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<input type="text" name="answer" class="form-control" placeholder="* پاسخ را وارد کنید" value="" />
+										</div>
+										<input type="submit" class="btnRegister"  value="ورود"/>
+									</div>
+								</div>
+							</form>
+						</div>
+						<!-- /Tab 2 -->
+					</div>
+				</div>
+			</div>
+			<!-- /Left Side Forms -->
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!-- /Scripts -->
+
+</body>
+
+</html>
